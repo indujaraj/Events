@@ -8,3 +8,8 @@ class EventForm(forms.ModelForm):
         model = Event
 
         fields = '__all__'
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            "start_time": forms.TimeInput(attrs={'type': 'time'}),
+            "end_time": forms.TimeInput(attrs={'type': 'time'}),
+        }
